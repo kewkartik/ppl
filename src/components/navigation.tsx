@@ -17,7 +17,7 @@ export function Navigation() {
   return (
     <NavigationMenu>
       <Avatar className="mx-auto max-w-7xl flex flex-1 justify-items-start">
-        <Link className="pl-6 xl:pl-0 pt-1 text-xl font-sans font-bold" href="/"> PPLignments </Link>
+        <Link className="pl-6 xl:pl-0 pt-1 text-xl font-sans font-bold" href="/"> PPL Lab </Link>
       </Avatar>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -35,7 +35,7 @@ export function Navigation() {
                       PPL Assignments
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">  
-                      Found it useful! Star the PPLignments repo.
+                      Found it useful! Star the PPl repo.
                       </p>
                     </a>
                   </NavigationMenuLink>

@@ -3,6 +3,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export default function Home() {
   const [num1, setNum1] = useState("");
@@ -34,7 +40,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col mx-auto max-w-2xl p-12">
+    <main className="flex flex-col mx-auto max-w-2xl p-12 pt-32">
       <div className="grid grid-cols-1 gap-4 p-4">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Calculator</h1>
         <Input
@@ -58,6 +64,34 @@ export default function Home() {
         <Button className="w-full">
           {result && <p>Result: {result}</p>}
         </Button>
+      </div>
+      <div className="max-w-2xl p-6 pt-32">
+      <hr />
+      <Accordion type="single" collapsible>
+        <AccordionItem value="item-1">
+          <AccordionTrigger>How does it work?</AccordionTrigger>
+          <AccordionContent>
+            It has a typescript frontend (nextjs) & a python backend (flask). <br/>
+            A request is made to the backend to get the result of the calc.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-2">
+          <AccordionTrigger>The python code?</AccordionTrigger>
+          <AccordionContent>
+            Here is an example
+          <br/>
+            <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+            {`@app.get("/api/add")
+              async function addNumbers(a, b) {
+              const result = a + b;
+            return { result };
+            }`}
+            </code>
+          <br/>
+          complete code <a href="https://github.com/kewkartik/ppl/blob/update/api/index.py" className="text-muted-foreground">here</a>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
       </div>
     </main>
   )
