@@ -1,5 +1,5 @@
 "use client"
-import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -73,6 +73,7 @@ export default function Home() {
           <AccordionContent>
             It has a typescript frontend (nextjs) & a python backend (flask). <br/>
             A request is made to the backend to get the result of the calc.
+            <Image className="mx-auto" src="/explain.svg" width={300} height={300} alt="Flowcahrt" draggable={false} />
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
@@ -81,14 +82,14 @@ export default function Home() {
             Here is an example
           <br/>
             <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
-            {`@app.get("/api/add")
-              async function addNumbers(a, b) {
-              const result = a + b;
-            return { result };
-            }`}
+            {`@app.get("/api/add")`} <br/>
+            {`async function addNumbers(a, b) {`} <br/>
+            {`const result = a + b;`} <br/>
+            {`return { result };`} <br/>
+            {`}`} 
             </code>
           <br/>
-          complete code <a href="https://github.com/kewkartik/ppl/blob/update/api/index.py" className="text-muted-foreground">here</a>
+          complete py code <a href="https://github.com/kewkartik/ppl/blob/update/api/index.py" className="text-muted-foreground">here</a>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
