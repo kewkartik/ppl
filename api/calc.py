@@ -46,4 +46,4 @@ async def div_numbers(a: float, b: float):
         result = a / b
         return {"result": result}
     else:
-        return {"error": "Division by zero is not allowed."}
+        return {"result": "Division by zero is not allowed."}

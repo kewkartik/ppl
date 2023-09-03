@@ -64,35 +64,38 @@ export default function Home() {
         <Button className="w-full">
           {result && <p>Result: {result}</p>}
         </Button>
+        <blockquote className="mt-4 border-l-2 pl-6 italic text-sm text-muted-foreground">
+          Because of coldstart, it could take a few seconds for initial result to show up. <a href="https://github.com/vercel/vercel/discussions/7961" className="hover:underline">read more</a>
+        </blockquote>
       </div>
-      <div className="max-w-2xl p-6 pt-32">
-      <hr />
-      <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
-          <AccordionTrigger>How does it work?</AccordionTrigger>
-          <AccordionContent>
-            It has a typescript frontend (nextjs) & a python backend (flask). <br/>
-            A request is made to the backend to get the result of the calc.
-            <Image className="mx-auto" src="/explain.svg" width={300} height={300} alt="Flowcahrt" draggable={false} />
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>The python code?</AccordionTrigger>
-          <AccordionContent>
-            Here is an example
-          <br/>
-            <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
-            {`@app.get("/api/add")`} <br/>
-            {`async function addNumbers(a, b) {`} <br/>
-            {`const result = a + b;`} <br/>
-            {`return { result };`} <br/>
-            {`}`} 
-            </code>
-          <br/>
-          complete py code <a href="https://github.com/kewkartik/ppl/blob/update/api/index.py" className="text-muted-foreground">here</a>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+      <div className="max-w-2xl p-4 pt-16">
+        <Accordion type="single" collapsible>
+          <hr />
+          <AccordionItem value="item-1">
+            <AccordionTrigger>How does it work?</AccordionTrigger>
+            <AccordionContent>
+              It has a typescript frontend (nextjs) & a python backend (flask). <br/>
+              A request is made to the backend to get the result of the calc.
+              <Image className="mx-auto" src="/explain.svg" width={300} height={300} alt="Flowcahrt" draggable={false} />
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>The python code?</AccordionTrigger>
+            <AccordionContent>
+              Here is an example
+            <br/>
+              <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+              {`@app.get("/api/add")`} <br/>
+              {`async function addNumbers(a, b) {`} <br/>
+              {`const result = a + b;`} <br/>
+              {`return { result };`} <br/>
+              {`}`} 
+              </code>
+            <br/>
+            complete py code <a href="https://github.com/kewkartik/ppl/blob/update/api/calc.py" className="text-muted-foreground">here</a>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </main>
   )
