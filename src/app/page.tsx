@@ -12,7 +12,7 @@ export default function Home() {
       <div className="flex h-5 items-center space-x-4 text-sm">
         <a href="/practice/calc">Calc</a>
         <Separator orientation="vertical" />
-        <a href="/notes/week1">Notes</a>
+        <a href="/ments/first">Ments</a>
       </div>
     </main>
   )

@@ -47,11 +47,11 @@ export function Navigation() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Notes</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Practice</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="p-6 md:w-[300px] space-y-2">
-                <ListItem href="/notes/week1" title="Week 1">
-                  Types of Lists
+                <ListItem href="/ments/first" title="First Assignment">
+                  Practicing Assignments
                 </ListItem>
               </ul>
             </NavigationMenuContent>
