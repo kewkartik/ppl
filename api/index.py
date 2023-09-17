@@ -1,6 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile
+from bardapi import Bard
 
 app = FastAPI()
+
+# Replace with your actual Bard API token
+token = 'awh99Tnz8dOaW-CJ9YgjfktkvrbG8tFDtYmurj6tfN2XnWQQC9dKzEjjeRBHEQCdS-eACA.'
 
 
 @app.get("/")
@@ -14,30 +18,48 @@ async def read_api_root():
 
 
 @app.get("/api/add")
-async def add_numbers(a: float, b: float):
-    result = a + b
+async def add_numbers(num1: float, num2: float):
+    result = num1 + num2
     return ({"result": result})
 
 
 @app.get("/api/sub")
-async def sub_numbers(a: float, b: float):
-    result = a - b
+async def sub_numbers(num1: float, num2: float):
+    result = num1 - num2
     return ({"result": result})
 
 
 @app.get("/api/mul")
-async def mul_numbers(a: float, b: float):
-    result = a * b
+async def mul_numbers(num1: float, num2: float):
+    result = num1 * num2
     return ({"result": result})
 
 
 @app.get("/api/div")
-async def div_numbers(a: float, b: float):
-    if b != 0:
-        result = a / b
+async def div_numbers(num1: float, num2: float):
+    if num2 != 0:
+        result = num1 / num2
         return ({"result": result})
     else:
         return ({"result": "Division by zero is not allowed."})
+
+
+@app.get("/api/mod")
+async def mod_numbers(num1: float, num2: float):
+    result = num1 % num2
+    return ({"result": result})
+
+
+@app.get("/api/expo")
+async def expo_numbers(num1: float, num2: float):
+    result = num1 ** num2
+    return ({"result": result})
+
+
+@app.get("/api/floor_division")
+async def floor_division_numbers(num1: float, num2: float):
+    result = num1 // num2
+    return ({"result": result})
 
 
 @app.get("/api/first_assignment")

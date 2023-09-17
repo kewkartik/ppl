@@ -21,7 +21,7 @@ export function Navigation() {
       </Avatar>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Practice</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Github</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="gap-3 space-y-2 p-6 md:w-[300px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -40,9 +40,6 @@ export function Navigation() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/practice/calc" title="Calc">
-                  Calc
-                </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -51,7 +48,10 @@ export function Navigation() {
             <NavigationMenuContent>
               <ul className="p-6 md:w-[300px] space-y-2">
                 <ListItem href="/ments/first" title="First Assignment">
-                  Practicing Assignments
+                  Basic logical operations
+                </ListItem>
+                <ListItem href="/practice/calc" title="Second Assignment">
+                  Operators
                 </ListItem>
               </ul>
             </NavigationMenuContent>

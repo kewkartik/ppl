@@ -19,7 +19,7 @@ export default function Home() {
 
   const calculate = async (op:string) => {
     if (isValidNumber(num1) && isValidNumber(num2)) {
-      const response = await fetch(`/api/${op}?a=${num1}&b=${num2}`);
+      const response = await fetch(`/api/${op}?num1=${num1}&num2=${num2}`);
       const data = await response.json();
       setResult(data.result);
     } else {
@@ -44,10 +44,13 @@ export default function Home() {
           onChange={(e) => setNum2(e.target.value)}
         />
         <div className="grid grid-cols-2 gap-2">
-          <Button className="w-full" variant="secondary" onClick={() => calculate("add")}>Add</Button>
-          <Button className="w-full" variant="secondary" onClick={() => calculate("sub")}>Sub</Button>
-          <Button className="w-full" variant="secondary" onClick={() => calculate("mul")}>Mul</Button>
-          <Button className="w-full" variant="secondary" onClick={() => calculate("div")}>Div</Button>
+          <Button className="w-full" variant="secondary" onClick={() => calculate("add")}>Addition</Button>
+          <Button className="w-full" variant="secondary" onClick={() => calculate("sub")}>Subtraction</Button>
+          <Button className="w-full" variant="secondary" onClick={() => calculate("mul")}>Multiplication</Button>
+          <Button className="w-full" variant="secondary" onClick={() => calculate("div")}>Division</Button>
+          <Button className="w-full" variant="secondary" onClick={() => calculate("mod")}>Modulus</Button>
+          <Button className="w-full" variant="secondary" onClick={() => calculate("expo")}>Exponentiation</Button>
+          <Button className="w-full" variant="secondary" onClick={() => calculate("floor_division")}>Floor Division</Button>
         </div>
         <Button className="w-full">
           {result && <p>Result: {result}</p>}
