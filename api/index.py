@@ -1,10 +1,5 @@
-from fastapi import FastAPI, UploadFile
-from bardapi import Bard
-
+from fastapi import FastAPI
 app = FastAPI()
-
-# Replace with your actual Bard API token
-token = 'awh99Tnz8dOaW-CJ9YgjfktkvrbG8tFDtYmurj6tfN2XnWQQC9dKzEjjeRBHEQCdS-eACA.'
 
 
 @app.get("/")
