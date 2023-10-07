@@ -50,8 +50,11 @@ export function Navigation() {
                 <ListItem href="/ments/first" title="First Assignment">
                   Basic logical operations
                 </ListItem>
-                <ListItem href="/practice/calc" title="Second Assignment">
+                <ListItem href="/ments/second" title="Second Assignment">
                   Operators
+                </ListItem>
+                <ListItem href="/ments/third" title="Third Assignment">
+                  if, elif & else
                 </ListItem>
               </ul>
             </NavigationMenuContent>

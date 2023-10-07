@@ -10,9 +10,11 @@ export default function Home() {
       </div>
       <Separator className="my-4" />
       <div className="flex h-5 items-center space-x-4 text-sm">
-        <a href="/practice/calc">Calc</a>
+        <a href="/ments/first">Ment #1</a>
         <Separator orientation="vertical" />
-        <a href="/ments/first">Ments</a>
+        <a href="/ments/second">Ment #2</a>
+        <Separator orientation="vertical" />
+        <a href="/ments/third">Ment #3</a>
       </div>
     </main>
   )
